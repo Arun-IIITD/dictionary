@@ -18,6 +18,11 @@ function App() {
 
 const fetchResponse = () => {
 
+   if (!words.trim()) {
+    setDefinition("Please enter a word to search.");
+    return;
+  }
+
   const searchword = words.toLowerCase();
   const found = theory.find(item => item.word.toLowerCase() === searchword)
 
@@ -26,7 +31,7 @@ const fetchResponse = () => {
   }
 
   else{
-    setDefinition("Word not found in the dictionary")
+    setDefinition("Word not found in the dictionary.")
   }
 
 }
