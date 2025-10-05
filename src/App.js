@@ -63,16 +63,16 @@ const fetchResponse = () => {
         Search
       </button>
 
-      {definition && (
-      <>
+      
+      <div style={{marginTop: "20px"}}>
       <h3>Definition:</h3>
 
       <p>
-        {definition}
+        {definition || "Word not found in the dictionary."}
       </p>
-      </>
+      </div>
       
-      )}
+      
 
 
 
