@@ -3,7 +3,8 @@ import { useState } from "react";
 function App() {
 
   const [words, setWord] = useState("");
-  const [definition, setDefinition] = useState("");
+  //const [definition, setDefinition] = useState("");
+   const [definition, setDefinition] = useState("");
 
   const theory =
 [
@@ -19,7 +20,7 @@ function App() {
 const fetchResponse = () => {
 
    if (!words.trim()) {
-    setDefinition("Please enter a word to search.");
+    setDefinition("Word not found in the dictionary.");
     return;
   }
 
@@ -68,7 +69,7 @@ const fetchResponse = () => {
       <h3>Definition:</h3>
 
       <p>
-        {definition || "Word not found in the dictionary."}
+        {definition}
       </p>
       </div>
       
